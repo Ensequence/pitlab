@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+// ### Core Modules
+var fs = require('fs');
+
+// ### Dependencies
+var program = require('commander'),
+    pitlabConfig = require('./../package.json');
+
+// Setup cli
+program.version(pitlabConfig.version)
+    .usage('<config-path>')
+    .parse(process.argv);
+
+// Check that config path was provided
+if (program.args.length === 0) {
+    console.log('Missing config path');
+    console.log('Usage: pitlab', program.usage());
+    return;
+}
+
+// Read in config
+var configPath = program.args[0];
+fs.readFile(configPath, 'utf8', function (err, config) {
+    // Handle error
+    if (err) {
+        console.log('Unable to read', configPath);
+        console.log(err.message);
+        return;
+    }
+
+    // Parse config
+    try {
+        config = JSON.parse(config);
+    } catch (ex) {
+        console.log('Invalid config', configPath);
+        console.log(ex);
+        return;
+    }
+
+    // Launch pitlab
+    require('./../app')(config);
+});
