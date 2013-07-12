@@ -2,7 +2,7 @@
  * conf/settings.js
  * Express configuration
  *
- * (C) Steven White 2013
+ * (C) Ensequence 2013
  */
 
 // ### Dependencies

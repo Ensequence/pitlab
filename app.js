@@ -2,7 +2,7 @@
  * app.js
  * Entry point into pitlab
  *
- * (C) Steven White 2013
+ * (C) Ensequence 2013
  */
 
 // ### Core Modules

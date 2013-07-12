@@ -2,7 +2,7 @@
  * routes/index.js
  * Index of route handlers for PitLab
  *
- * (C) Steven White 2013
+ * (C) Ensequence 2013
  */
 
 // ### Dependencies

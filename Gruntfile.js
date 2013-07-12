@@ -2,7 +2,7 @@
  * Gruntfile.js
  * Grunt setup / configuration
  *
- * (C) Steven White 2013
+ * (C) Ensequence 2013
  */
 
 // ### Exports
