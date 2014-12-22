@@ -7,22 +7,22 @@ PitLab does not require or provide an external tool integration to import storie
 ### Setup
 
 1. **Install PitLab**  
-```
-npm install -g pitlab
-```
+    ```
+    npm install -g pitlab
+    ```
 
-2. **Start PitLab**  
-```
-PITLAB_PORT=3000 pitlab path/to/config.json
-```
+1. **Start PitLab**  
+    ```
+    PITLAB_PORT=3000 pitlab path/to/config.json
+    ```
 
-3. **Configure Pivotal Tracker Project**  
-Go to the project you wish to integrate -> Settings -> Integrations -> Activity Web Hook  
-Fill in the form as follows  
-  * **Web Hook URL** url to interact with PitLab, of the form `http://<host>:3000/storyupdate/<repo_path`
-      * **host** is the publicly available location pitlab is deployed
-      * **repo_path** is the gitlab path to the project to integrate with, including the group (e.g. \<group>/\<project>)
-  * **API Version** v3
+1. **Configure Pivotal Tracker Project**  
+    Go to the project you wish to integrate -> Settings -> Integrations -> Activity Web Hook  
+    Fill in the form as follows  
+      * **Web Hook URL** url to interact with PitLab, of the form `http://<host>:3000/storyupdate/<repo_path`
+          * **host** is the publicly available location pitlab is deployed
+          * **repo_path** is the gitlab path to the project to integrate with, including the group (e.g. `<group>/<project>`)
+      * **API Version** v3
 
 ### Configuration
 PitLab expects a JSON configuration file when initiated from the command line.  The configuration has the following properties:  
